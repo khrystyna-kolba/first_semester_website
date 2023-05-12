@@ -1,0 +1,196 @@
+body, html {
+  margin: 0;
+  
+}
+/* Хедер і його складові */
+header{
+	overflow: hidden;
+	background-color: #6f6355;
+	font-family: monospace;
+	padding: 20px 10px;
+	position: sticky;
+	top: 0;
+	z-index:3;
+}
+header a {
+  float: left;
+  color: #e4e1d2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+header a.logo {
+  color: #f6e0b5;
+  font-size: 25px;
+  font-weight: bold;
+}
+header a:hover {
+  background-color: #bda986;
+  color: #6f6355;
+}
+header a.active {
+  background-color: #bda986;
+  color: #6f6355;
+  margin: 0px 10px 0px 10px;
+  padding: 12px 20px 12px 20px;
+}
+.header-right {
+  float: right;
+}
+
+/* Стилізація заголовка на фоні і початкового фону */
+.title{
+	opacity: 100%;
+	font-size: 400%;
+	font-family: monospace;
+	color: #f6e0b5;
+	background-color: #6f6355;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 252px;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	z-index: 2;
+}
+.parallax.first {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+    background-image: url('../imgs/no1.jpg');
+}
+/* Перехід між елементами(дає тінь) */
+.section{
+    position: relative;
+	z-index: 2;
+	padding: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 15px rgba(0,0,0,0.1);   
+}
+/* значення для ефекту "паралакс" */
+.parallax {
+	border: 0px;
+	margin:0px;
+	padding:0 px;
+	font-family: monospace;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Стилізація основного тексту (там де безпосередньо статті) */
+.second {
+	display: normalflow;
+	text-align: left;
+    background-image: url('../imgs/no2.jpg');
+    height: 70%;
+	font-family: monospace;
+	color:#fff6ec;
+	font-size: 23px;
+}
+p, h2, h4 {
+	padding: 15px;
+	margin: 0;
+}
+img{
+	float: right;
+	margin: 15px;	
+}
+/* Стилізація звичайних ссилок  */
+a{
+	text-decoration: none;
+	color: white;
+}
+a:hover{
+	color: black;
+}
+/* Стилізація табличок */
+table{
+	border-collapse: collapse;
+    width: 100%;
+	text-align: center;
+}
+th.constant{
+	width: 200px;
+}
+th,td {
+  border: 3px solid #dddddd;
+  padding: 8px;
+}
+/* Футер(у моєму випадку нижня частина сторінки) */
+.parallax.third {
+	position: relative;
+    display: block;
+    text-align: center;
+    background-image: url('../imgs/no3.jpg');
+    height: 400px;
+}
+/* Цитати(ті, що в кінці кожної сторінки) */
+.q, q{
+	font-style: italic;
+	font-size: 25px;
+	background-color: transparent;
+	display: block; 
+	position: relative; 
+	top: 150px;
+	margin:0;
+	padding: 15px;
+    color: white; 
+}
+/* Стрілочка в кінці кожної сторінки, яка повертає на початок сторінки */
+.arrow {
+	position : absolute;
+	bottom: 0px;
+    border: solid #d4d7dc;
+    border-width: 0 15px 15px 0;
+    display: inline-block;
+	color: transparent;
+    padding: 15px;
+	margin: 15px;
+	background-color: transparent;
+    cursor: pointer;
+	transform: rotate(-135deg);
+}
+
+@media screen and (max-width: 1050px) {
+	iframe{
+		display: none;
+	}
+	header{
+		display: block;
+		position: static;
+	}
+	.header-right {
+		float: none;
+		display: block;
+    }
+	.title{
+		font-size: 250%;
+	    margin: 150px;
+    }
+	.second {
+	font-size: 15px;
+	/* height:1300px; */
+    }
+	.q, q{
+	font-size: 18px;
+	top: 100px;
+    }
+   .arrow {
+	bottom: 0px;
+    border-width: 0 10px 10px 0;
+    padding: 10px;
+	margin: 10px;
+    }
+}
+@media screen and (max-width: 600px) {
+	img{
+	display: none;
+	}
+}
